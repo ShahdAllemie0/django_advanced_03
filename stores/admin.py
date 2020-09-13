@@ -4,7 +4,10 @@ from .models import Store
 # Register your models here.
 
 class StoreAdmin(admin.ModelAdmin):
-    fields=['name','description',]
+    fields=['id','name','description',]
     search_fields=['name','description']
+    list_filter = ['added']
+    list_display_links=['name']
+    list_editable = ['description']
 
 admin.site.register(Store,StoreAdmin)
