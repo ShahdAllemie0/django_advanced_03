@@ -3,10 +3,8 @@ from .models import Store
 
 # Register your models here.
 
-class StoreModelAdmin(admin.ModelAdmin):
-    class Meta:
-        model=Store
-    list_display=['id','name','description']
+class StoreAdmin(admin.ModelAdmin):
+    fields=['name','description',]
     search_fields=['name','description']
 
-admin.site.register(Store,StoreModelAdmin)
+admin.site.register(Store,StoreAdmin)
