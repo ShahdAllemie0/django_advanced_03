@@ -4,7 +4,7 @@ from .models import Store
 # Register your models here.
 
 class StoreAdmin(admin.ModelAdmin):
-    fields=['id','name','description',]
+    list_display=['id','name','description',]
     search_fields=['name','description']
     list_filter = ['added']
     list_display_links=['name']
